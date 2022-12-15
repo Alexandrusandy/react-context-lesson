@@ -1,10 +1,8 @@
 import React, { useContext } from 'react';
-import { createStructuredSelector } from 'reselect';
 import { useNavigate } from 'react-router-dom';
 
 import CustomButton from '../custom-button/custom-button.component';
 import CartItem from '../cart-item/cart-item.component';
-import { selectCartItems } from '../../redux/cart/cart.selectors';
 
 import './cart-dropdown.styles.scss';
 import { CartContext } from '../../providers/cart/cart.provider';
@@ -34,9 +32,5 @@ const CartDropdown = () => {
     </div>
   );
 };
-
-const mapStateToProps = createStructuredSelector({
-  cartItems: selectCartItems,
-});
 
 export default CartDropdown;
